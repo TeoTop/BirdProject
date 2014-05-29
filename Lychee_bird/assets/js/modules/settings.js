@@ -1,7 +1,7 @@
 /**
  * @name		Settings Module
- * @description	Lets you change settings.
- * @author		Tobias Reich
+ * @description	Permet de récupérer les paramètres de Lychee et de les gérer.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 
@@ -30,13 +30,13 @@ var settings = {
 				lychee.api(params, function(data) {
 
 					if (data!==true) {
-
+						console.log(params);
 						// Configuration failed
 						setTimeout(function() {
-
+							
 							// Connection failed
 							if (data.indexOf("Warning: Connection failed!")!==-1) {
-
+								
 								buttons = [
 									["Retry", function() { setTimeout(settings.createConfig, 400) }],
 									["", function() {}]

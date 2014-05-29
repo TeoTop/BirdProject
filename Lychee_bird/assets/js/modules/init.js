@@ -1,11 +1,13 @@
 /**
  * @name		Init Module
- * @author		Tobias Reich
+ * @description Fichier JS permettant de lancer l'affichage (lors du chargement de la page). Elle permet d'initialiser
+ * les actions aux fonctions associées et lance la fonction lychee.load().
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 
 $(document).ready(function(){
-
+	//initialisation des évenements
 	/* Event Name */
 	var event_name = (mobileBrowser()) ? "touchend" : "click";
 	
@@ -146,7 +148,12 @@ $(document).ready(function(){
 		});
 
 	/* Init */
+	//lancement de lychee
 	lychee.init();
-	setInterval(upload.start.checkServer,2000);
-
+	//permet de créer la page d'accueil lors du chargement du site
+	url = document.location.href.split("/").reverse();
+	if(lychee.publicMode==true && url[0]===""){
+		lychee.welcomeDialog();
+	}
+	
 });

@@ -4,6 +4,8 @@
  * @name        Session Module
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * description	Permet d'initialiser les paramètres du site (regroupés dans la table lychee_settings)
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 

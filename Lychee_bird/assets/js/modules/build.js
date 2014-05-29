@@ -1,7 +1,7 @@
 /**
  * @name		Build Module
- * @description	This module is used to generate HTML-Code.
- * @author		Tobias Reich
+ * @description	Ce module permet de créer, supprimer ou modifier les balises HTML
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

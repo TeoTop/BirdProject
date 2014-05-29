@@ -4,6 +4,7 @@
  * @name        DB Module
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @description Ce fichier permet de créer la base de données, de créer un flux avec celle-ci et crée le fichier de configuration (conf.php)
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 
@@ -56,6 +57,7 @@ $config = "<?php
  * @name        Config
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Chapon	Théo
  * @copyright   2014 by Philipp Maurer, Tobias Reich
 */
 
@@ -180,7 +182,7 @@ function createTables($database) {
 				`taketime` varchar(8) NOT NULL,
 				`star` tinyint(1) NOT NULL,
 				`thumbUrl` varchar(50) NOT NULL,
-				`album` varchar(30) NOT NULL DEFAULT '0',
+				`album` int(11) NOT NULL DEFAULT '0',
 				`import_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
 				PRIMARY KEY (`id`)
 			) ENGINE=MyISAM DEFAULT CHARSET=latin1;

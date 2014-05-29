@@ -1,6 +1,6 @@
 /**
  * @name		Lychee Module
- * @description	This module provides the basic functions of Lychee.
+ * @description	Module principale. Permet de gérer le déplacement sur le site et lance les fonctions d'affichage de base.
  * @author		Tobias Reich
  * @copyright	2014 by Tobias Reich
  */
@@ -41,14 +41,8 @@ var lychee = {
 
 			if (data.loggedIn!==true) {
 				lychee.setMode("public");
-				lychee.sorting = data.config.sorting;
-				lychee.folder = data.config.folder;
-			} else {
-				lychee.username = data.config.username;
-				lychee.sorting = data.config.sorting;
-				lychee.folder = data.config.folder;
 			}
-
+			
 			// No configuration
 			if (data==="Warning: No configuration!") {
 				lychee.header.hide();
@@ -57,12 +51,21 @@ var lychee = {
 				settings.createConfig();
 				return true;
 			}
-
+			
 			// No login
 			if (data.config.login===false) {
 				settings.createLogin();
 			}
 
+			if (data.loggedIn!==true) {
+				lychee.sorting = data.config.sorting;
+				lychee.folder = data.config.folder;
+			} else {
+				lychee.username = data.config.username;
+				lychee.sorting = data.config.sorting;
+				lychee.folder = data.config.folder;
+			}
+			
 			lychee.checkForUpdates = data.config.checkForUpdates;
 			$(window).bind("popstate", lychee.load);
 			lychee.load();
@@ -179,7 +182,6 @@ var lychee = {
 
 		var albumID = "",
 			photoID = "",
-			url = document.location.href.split("/").reverse();
 			hash = document.location.hash.replace("#", "").split("/");
 
 		contextMenu.close();
@@ -223,20 +225,12 @@ var lychee = {
 			if (visible.album()) view.album.hide();
 			if (visible.photo()) view.photo.hide();
 			albums.load();
-			
-			//view.welcome.init();
-			//welcome.load();
-			/*if(lychee.publicMode==false){
-				upload.start.checkServer();
-			}*/
-			
-			
-			if(lychee.publicMode==true && url[0]===""){
-				lychee.welcomeDialog();
-			}
 
 		}
-
+		//notification pour les images dans le dossier import
+		if(lychee.username!=""){
+			setInterval(upload.start.checkServer,2000);
+		}
 	},
 
 	

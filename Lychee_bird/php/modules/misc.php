@@ -4,6 +4,8 @@
  * @name        Misc Module
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * @description	Ce fichier permet d'exécuter la fonction de recherche
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 
@@ -46,7 +48,8 @@ function search($term) {
 
 	$return["albums"] = "";
 
-    $result = $database->query("SELECT * FROM lychee_photos WHERE title like '%$term%' OR color like '%$term%' OR birdsize like '%$term%';");
+    $result = $database->query("SELECT * FROM lychee_photos JOIN lychee_albums ON lychee_photos.album=lychee_albums.id WHERE (lychee_photos.title like '%bl%' 
+	OR color like '%bl%' OR birdsize like '%bl%') AND lychee_albums.type='name';");
     while($row = $result->fetch_array()) {
         $return['photos'][$row['id']] = $row;
         $return['photos'][$row['id']]['sysdate'] = date('d F Y', strtotime($row['sysdate']));

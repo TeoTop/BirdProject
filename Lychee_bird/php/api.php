@@ -4,6 +4,10 @@
  * @name        API
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * @description	Ce fichier permet de gérer l'accés aux fonctions côté serveur. Cela consiste à attribuer un droit d'accés en fonction
+ * du fait que la demande viennent d'un administrateur ou non. Les fonctions permttent de gérer les photos dans le dossier upload et de 
+ * gérer la base de données.
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 

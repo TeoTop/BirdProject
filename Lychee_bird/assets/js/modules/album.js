@@ -1,7 +1,7 @@
 /**
  * @name		Album Module
- * @description	Takes care of every action an album can handle and execute.
- * @author		Tobias Reich
+ * @description	Cette classe gère les fonctions associées à un album. Elle sert pour l'affichage d'un album.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

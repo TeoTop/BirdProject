@@ -1,9 +1,9 @@
 ﻿<?php
 
 /**
- * @name        SSH Module
- * @author      Philipp Maurer
- * @author      Tobias Reich
+ * @name        Raspberry Module
+ * @author      Theo Chapon
+ * description	Ce fichier permet de gérer les rasp de la base
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 

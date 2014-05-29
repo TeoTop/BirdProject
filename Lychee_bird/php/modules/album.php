@@ -4,6 +4,8 @@
  * @name        Album Module
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * @description	Permet de gérer la table lychee_album
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 

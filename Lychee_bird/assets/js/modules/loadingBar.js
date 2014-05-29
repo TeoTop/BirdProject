@@ -1,14 +1,16 @@
 /**
  * @name		LoadingBar Module
- * @description	This module is used to show and hide the loading bar.
- * @author		Tobias Reich
+ * @description	Ce module permet d'afficher la barre de chargement lors de requêtes envoyées au serveur comme 
+ * l'upload ou l'affichage des albums.
+ * @author		Tobias Reich _ Theo Chapon
  * @copyright	2014 by Tobias Reich
  */
 
 loadingBar = {
 
 	status: null,
-
+	
+	// permet d'afficher la bar de chargement ou la barre d'erreur si besoin (statut)
 	show: function(status, errorText) {
 
 		if (status==="error") {
@@ -45,6 +47,7 @@ loadingBar = {
 
 	},
 
+	//efface la barre de chargement
 	hide: function(force_hide) {
 
 		if ((loadingBar.status!=="error"&&loadingBar.status!=null)||force_hide) {

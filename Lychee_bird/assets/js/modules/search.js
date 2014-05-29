@@ -1,7 +1,7 @@
 /**
  * @name        Search Module
- * @description	Searches through your photos and albums.
- * @author		Tobias Reich
+ * @description	Ce fichier correspond au module de recherche.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

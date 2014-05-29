@@ -3,6 +3,8 @@
 /**
  * @name        Settings Module
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * description	Permet de gérer la table settings
  * @copyright   2014 by Tobias Reich
  */
 

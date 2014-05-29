@@ -1,7 +1,7 @@
 /**
  * @name        Visible Module
- * @description	This module is used to check if elements are visible or not.
- * @author		Tobias Reich
+ * @description	Ce module permet de retourner si un élément est visible ou non.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

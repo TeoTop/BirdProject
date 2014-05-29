@@ -1,7 +1,7 @@
 /**
  * @name		Albums Module
- * @description	Takes care of every action albums can handle and execute.
- * @author		Tobias Reich
+ * @description	Permet de gérer toutes les albums. Cette classe est utilisée pour l'affichage de la page regroupant les albums
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

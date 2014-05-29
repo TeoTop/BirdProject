@@ -1,7 +1,7 @@
 /**
  * @name        Password Module
- * @description	Controls the access to password-protected albums and photos.
- * @author      Tobias Reich
+ * @description	Controle le fait qu'un album soit protégé par un mot de passe.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright   2014 by Tobias Reich
  */
 

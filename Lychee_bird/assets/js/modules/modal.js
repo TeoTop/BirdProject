@@ -1,7 +1,7 @@
 /**
  * @name        Modal Module
- * @description	Build, show and hide a modal.
- * @author		Tobias Reich
+ * @description	Permet de créer, d'afficher et de gérer une fenêtre sur le site.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

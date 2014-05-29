@@ -4,6 +4,8 @@
  * @name        Upload Module
  * @author      Philipp Maurer
  * @author      Tobias Reich
+ * @author      Theo Chapon
+ * description	Permet de gérer l'upload des fichiers sur le site
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 

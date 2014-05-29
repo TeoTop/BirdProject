@@ -1,7 +1,7 @@
 /**
  * @name		Album Module
- * @description	Takes care of every action an album can handle and execute.
- * @author		Tobias Reich
+ * @description	Permet de gérer toutes les importations de photos sur lychee.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

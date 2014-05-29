@@ -1,7 +1,7 @@
 /**
  * @name		Photo Module
- * @description	Takes care of every action a photo can handle and execute.
- * @author		Tobias Reich
+ * @description	Permet de gérer les photos. Correspond à l'affichage d'une photo.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

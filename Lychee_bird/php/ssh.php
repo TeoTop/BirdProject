@@ -2,13 +2,14 @@
 
 /**
  * @name        SSH Module
- * @author      Philipp Maurer
- * @author      Tobias Reich
+ * @author      Theo Chapon
+ * @description	Ce fichier permet de gérer les fonctions qui ont pour but d'envoyer des commandes aux Raspberry Pi
  * @copyright   2014 by Philipp Maurer, Tobias Reich
  */
 
 if (!defined('LYCHEE')) exit('Error: Direct access is not allowed!');
 
+//Cette fonction permet de démarrer/arreter l'exécutable ./bird situé sur les modules caméra 
 function turnOpenCV($address, $etat) {
 	
 	$result;
@@ -44,8 +45,9 @@ function turnOpenCV($address, $etat) {
 	return $result;
 }
 
+//démarre le script ./bird sur la Raspberry à l'adresse spécifiée
 function startOpenCV($address) {
-
+	//connection en ssh
 	$ssh = new Net_SSH2($address);
 	if(!$ssh->login('pi', 'raspberry')){
 		return false;
@@ -55,6 +57,7 @@ function startOpenCV($address) {
 
 }
 
+//on stop tous les processus ./bird qui pourraient tourner
 function stopOpenCV($address) {
 
 	$ssh = new Net_SSH2($address);
@@ -72,6 +75,7 @@ function stopOpenCV($address) {
 	return true;
 }
 
+//on prend une photo manuellement sur la Rasp spécifié
 function takePicture($rasp) {
 
 	if($rasp == 'all'){
@@ -93,14 +97,20 @@ function takePicture($rasp) {
     return true;
 }
 
-function setNetwork() {
-	$ssh = new Net_SSH2($address);
-	if(!$ssh->login('pi', 'raspberry')){
-		return false;
-	}
+//cette fonction permet de récupérer tous les Rasp sur le réseau local (10.1.0.X) et de les placer dans la table de lychee_rasp
+function setNetwork($adresse) {
+	deleteRasp();
 	$result = $ssh->exec("netstat -nt");
-	
-	/*deleteRasp();
-	addRasp();*/
+	$match = array();
+	$adresse = array();
+	$regex = "/10\.1\.0\.\d+/";
+	$matched = preg_match_all($regex,$result,$match);
+	if ($matched) {
+		foreach($match[0] as $ip){
+			if($ip!="10.1.0.1"){
+				addRasp($ip);
+			}
+		}
+	}
 }
 ?>

@@ -1,6 +1,6 @@
 /**
  * @name        View
- * @description	Used to view single photos with view.php
+ * @description	Permet de gérer l'affichage d'une photo.
  * @author      Tobias Reich
  * @copyright   2014 by Tobias Reich
  */

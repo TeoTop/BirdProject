@@ -1,7 +1,7 @@
 /**
  * @name		UI View
- * @description	Responsible to reflect data changes to the UI.
- * @author		Tobias Reich
+ * @description	Ce code permet de rafraichir les pages de Lychee.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 

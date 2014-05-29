@@ -1,7 +1,7 @@
 /**
  * @name		ContextMenu Module
- * @description	This module is used for the context menu.
- * @author		Tobias Reich
+ * @description	Permet de gérer l'affichage de fenêtre du menu.
+ * @author		Tobias Reich _ Chapon Theo
  * @copyright	2014 by Tobias Reich
  */
 
